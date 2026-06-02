@@ -11,8 +11,17 @@
   <div class="teamtailor-jobs-widget"
     data-teamtailor-limit="20"
     data-teamtailor-feed="internal"
-    data-teamtailor-link-target="_blank"
     data-teamtailor-api-key="VHNU8nF8zGG2RpwdW0PDvcVLc4Ti4dJfdCermZze">
-</div>
+  </div>
+
+  <script>
+    // Väntar tills widgeten laddats och tvingar alla länkar att öppnas i ny flik
+    setInterval(function() {
+      document.querySelectorAll('a').forEach(function(link) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+    }, 500);
+  </script>
 </body>
 </html>
