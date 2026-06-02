@@ -15,11 +15,9 @@
   </div>
 
   <script>
-    // Väntar tills widgeten laddats och tvingar alla länkar att öppnas i ny flik
     setInterval(function() {
       document.querySelectorAll('a').forEach(function(link) {
-        link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener noreferrer');
+        link.setAttribute('target', '_top');
       });
     }, 500);
   </script>
